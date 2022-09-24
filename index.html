@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                danger: '#ff6363',
+              }
+            }
+          }
+        }
+      </script>
+      <style type="text/tailwindcss">
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @layer utilities {
+          .harsh {
+            color : red ;
+          }
+        }
+      </style>
+</head>
+<body class="font-Noto San" >
+    <div class="grid md:grid-cols-3">
+    <div class="md:col-span-1 md:flex md:justify-end">
+        <nav >
+            <div class="flex justify-strat items-center">
+            <div>
+                <h1 class=" font-bold uppercase p-4 border-b border-gray-100 text-red-500 hover:text-red-700 text-2xl"><a href="/">MetaFood</a></h1>
+            </div>
+            <div class=" pl-80 cursor-pointer md:hidden" id="burger">
+                <svg class="w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </div>
+             </div>
+            <ul class="text-sm mt-6 hidden md:block" id="menu">
+                <li class="text-gray-700 font-bold">
+                    <svg class="w-5 m-3 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                    <a href="#"> <span>Home</span></a>
+                </li>
+                <li>
+                    <svg class="w-5 m-3 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <a href="#"> <span>About</span></a>
+                </li>
+                <li>
+                    <svg class="w-5 m-3 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    <a href="#"> <span>Contact</span></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <main class="px-16 py-6 bg-gray-100 md:col-span-2 ">
+
+        <div class=" flex justify-center md:justify-end">
+            <a href="#" class="rounded-full py-2 px-3 uppercase text-xs font-bold tracking-wide harsh border-red-600 md:border-2 hover:bg-red-600 hover:text-white transition ease-in-out duration-1000">Log In</a>
+            <a href="#" class="rounded-full py-2 px-3 uppercase text-xs font-bold tracking-wide harsh border-red-600 md:border-2 mx-2 hover:bg-red-600 hover:text-white transition ease-in duration-1000">Sign Up</a>
+        </div>
+
+        <!-- <div class="flex items-end">
+            <div class="bg-red-500 h-4 w-6 "></div> 
+            <div class="bg-blue-500 h-8 w-6 "></div> 
+            <div class="bg-green-500 h-12 w-6 "></div>
+        </div> -->
+
+        <header>
+            <h2 class="text-gray-700 text-6xl font-semibold" >Recipes</h2>
+            <h2 class="text-3xl font-semibold">For me</h2>
+        </header>
+
+        <div>
+            <h4 class="font-bold mt-12 pb-2 border-b border-gray-200">Latest Recipes</h4>
+            <div class="mt-8 grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 gap-8">
+                <div class="bg-white rounded overflow-hidden shadow-lg relative hover:shadow-2xl ">
+                    <img src="img/p1.jpg" class="w-full sm:h-48 object-cover"  alt="">
+                    <div class="m-4">
+                        <span class="font-bold">5 bean chill stew</span>
+                        <span class="block text-gray-500 text-sm">Recipes by me</span>
+                    </div>
+                    <div class="bg-gray-100 text-gray-400  font-bold justify-center p-2 ml-2 mt-2 text-sm rounded-full absolute top-0" >
+                        <svg class="w-5  inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span >20 Minit Left</span>
+                    </div>
+                </div>
+                <div class="bg-white rounded overflow-hidden shadow-lg relative hover:shadow-2xl">
+                    <img src="img/p2.webp" class="w-full sm:h-48 object-cover"  alt="">
+                    <div class="m-4">
+                        <span class="font-bold">5 bean chill stew</span>
+                        <span class="block text-gray-500 text-sm">Recipes by me</span>
+                    </div>
+                    <div class="bg-gray-100 text-gray-400  font-bold justify-center p-2 ml-2 mt-2 text-sm rounded-full absolute top-0" >
+                        <svg class="w-5  inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span>10 Minit Left</span>
+                    </div>
+                </div>
+                <div class="bg-white rounded overflow-hidden shadow-lg relative hover:shadow-2xl">
+                    <img src="img/p3.gif" class="w-full sm:h-48 object-cover"  alt="">
+                    <div class="m-4">
+                        <span class="font-bold">5 bean chill stew</span>
+                        <span class="block text-gray-500 text-sm">Recipes by me</span>
+                    </div>
+                    <div class="bg-gray-100 text-gray-400  font-bold justify-center p-2 ml-2 mt-2 text-sm rounded-full absolute top-0" >
+                        <svg class="w-5  inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span>30 Minit Left</span>
+                    </div>
+                </div>
+                
+             </div>
+
+
+            <h4 class="font-bold mt-12 pb-2 border-b border-gray-200">Populer Recipes</h4>
+            <div class="mt-8">
+                <div class="">
+                    <img src="img/p2.webp" alt="">
+                    <div>
+                        <span>5 bean chill stew</span>
+                        <span>Recipes by me</span>
+                    </div>
+                </div>
+             </div>
+             <div class="flex justify-center">
+                <div class="bg-gray-200 rounded-full py-2 px-3 uppercase text-xs font-bold tracking-wide harsh border-red-600 md:border-2 hover:bg-red-600 hover:text-white cursor-pointer transition ease-out duration-500 hover:scale-110 ">
+                    Load More
+                </div>
+             </div>
+        </div>
+    </main>
+    </div>
+<script src="index.js"></script></body>
+</html>
